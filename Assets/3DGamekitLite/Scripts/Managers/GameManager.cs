@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public int levelIndex;
     public Text timerText;
     private float startTime;
+    private bool finish = false;
+    public int numStars;
+    public float minutes;
 
     private void Awake()
     {
@@ -22,6 +25,7 @@ public class GameManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,23 +38,46 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer();
+    }
+
+    public void timer()
+    {
+        if (finish)
+        return;
+
         float t = Time.time - startTime;
-        string minutes = ((int)t / 60).ToString();
+        minutes = ((int)t / 60);
         string seconds = (t % 60).ToString("f1");
-        timerText.text = minutes + ":" + seconds;
+        timerText.text = minutes.ToString() + ":" + seconds;
 
     }
+
     public void EnemiesCountDown()
     {
         enemyCount -= 1;
         Debug.Log("Enemies Left:" + enemyCount);
         if(enemyCount <= 0)
         {
+           
+            finish = true;
             enemyCount = 0;
             StartUI.Singleton.GameoverPanel();
-            
+            Rating();
+        
         }
     }
+
+    public void Rating()
+    {
+        if (minutes <= 5)
+           numStars =  3;
+        else if ( minutes>5 && minutes <= 8 )
+           numStars = 2;
+        else if (minutes > 8)
+           numStars = 1;
+    }
+
 
     public void LevelFailed()
     {
