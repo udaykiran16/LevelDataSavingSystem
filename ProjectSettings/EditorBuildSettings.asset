@@ -11,4 +11,55 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/3DGamekitLite/Scenes/Level_01.unity
     guid: e3b358f144a95d6439cd66aab3f957a1
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_02.unity
+    guid: eddf93916bbf5c44e94b5dfac224b641
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_03.unity
+    guid: b8e7cc06bd5f158479bc39d1707b22aa
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_04.unity
+    guid: f91de3abc2a229542a5b6e01757ad106
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_05.unity
+    guid: 1536e0e7dc59c764a90f5d76665f7897
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_06.unity
+    guid: 20fa00be765e1c848b2b47be77f8ccab
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_07.unity
+    guid: c01584316ca5383459ebddd0ac9e8817
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_08.unity
+    guid: 1b56bdf998198e84a8aa4f7b0a746214
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_09.unity
+    guid: 824a2f1ede06ee44d83175feec45e579
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_10.unity
+    guid: d70632172da0a3849abc61221fc7cb3b
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_11.unity
+    guid: 78998d8a6054cfa44a06134c2f59faf7
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_12.unity
+    guid: 70a2d4e8e5b429d4fa7d9ed31c26e8ca
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_13.unity
+    guid: 2d4713e73bcf92e42aee7a494e72bb0f
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_14.unity
+    guid: e6b62a6220dd9424eb96d706eae0bf14
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_15.unity
+    guid: 4f9f4229fa7635e4497aeda1fab2bccc
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_16.unity
+    guid: 2a423bac23dd24745873ad6da3ea32c5
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_17.unity
+    guid: 2f743c33b9c47254ba1eab4a8d5c488a
+  - enabled: 1
+    path: Assets/3DGamekitLite/Scenes/Level_18.unity
+    guid: 283cee8085e188d42bd79e9fe36f2e5a
   m_configObjects: {}
