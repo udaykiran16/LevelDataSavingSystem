@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6153,6 +6153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelButtons: []
+  levelLocks: []
 --- !u!4 &701015550
 Transform:
   m_ObjectHideFlags: 0
@@ -7545,6 +7546,7 @@ GameObject:
   - component: {fileID: 837544597}
   - component: {fileID: 837544596}
   - component: {fileID: 837544595}
+  - component: {fileID: 837544598}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -7662,6 +7664,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837544593}
   m_CullTransparentMesh: 0
+--- !u!114 &837544598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837544593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05049a196c8f4544bfd6e04876fc4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeIndex: 1
+  starsHolder: {fileID: 1650638614}
+  firstStarImage: {fileID: 423415072}
+  secondStarImage: {fileID: 2141467907}
+  thirdStarImage: {fileID: 743744851}
 --- !u!1 &839415396
 GameObject:
   m_ObjectHideFlags: 0
@@ -13579,6 +13598,7 @@ GameObject:
   - component: {fileID: 1536666112}
   - component: {fileID: 1536666111}
   - component: {fileID: 1536666110}
+  - component: {fileID: 1536666113}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -13696,6 +13716,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536666108}
   m_CullTransparentMesh: 0
+--- !u!114 &1536666113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536666108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05049a196c8f4544bfd6e04876fc4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeIndex: 2
+  starsHolder: {fileID: 1488166866}
+  firstStarImage: {fileID: 1840115298}
+  secondStarImage: {fileID: 1579343477}
+  thirdStarImage: {fileID: 634027363}
 --- !u!1 &1536998733
 GameObject:
   m_ObjectHideFlags: 0

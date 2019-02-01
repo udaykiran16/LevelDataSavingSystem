@@ -9,7 +9,8 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Singleton { get; private set; }
 
     public Button[] levelButtons;
-    // Start is called before the first frame update
+    public GameObject[] levelLocks;
+    private int levelUnlocked;
 
     private void Awake()
     {
@@ -27,7 +28,25 @@ public class LevelManager : MonoBehaviour
     }
     void Start()
     {
-        
+        // here we should get the integer value of levelUnlocked from JSON
+    }
+
+    //Unlock levels
+    void Unlocklevel()
+    {
+        for (int i = 0; i < levelLocks.Length; i++)
+        {
+            if (i <= levelUnlocked)
+            {
+                levelButtons[i].interactable = true;
+                levelLocks[i].gameObject.SetActive(false);
+            }
+            else
+            {
+                levelButtons[i].interactable = false;
+                levelLocks[i].gameObject.SetActive(true);
+            }
+        }
     }
 
     // Update is called once per frame
