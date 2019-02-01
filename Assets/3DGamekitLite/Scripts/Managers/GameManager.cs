@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
     public void Rating()
     {
         JSONNode LevelData = JSON.Parse(PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
-        numStars = LevelData["LevelData"]["numStars"].AsInt;
+        numStars = LevelData["LevelData"]["levelIndex"]["numStars"].AsInt;
 
         if (minutes <= 5)
            numStars =  3;
@@ -87,15 +87,17 @@ public class GameManager : MonoBehaviour
            numStars = 2;
         else if (minutes > 8)
            numStars = 1;
-        LevelData["LevelData"]["numStars"].AsInt = numStars;
+        LevelData["LevelData"]["levelIndex"]["numStars"].AsInt = numStars;
         PlayerPrefs.SetString(GameSettings.LEVEL_DATA_PP, LevelData.ToJSON(1));
         PlayerPrefs.Save();
+        Debug.Log("heloo" + PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
     }
 
     public void initializeData()
     {
         JSONNode LeveldataJSON = JSON.Parse("{}");
-        LeveldataJSON["LevelData"]["numStars"].AsInt = 0;
+        LeveldataJSON["LevelData"]["levelIndex"].AsInt = levelIndex;
+        LeveldataJSON["LevelData"]["levelIndex"]["numStars"].AsInt = 0;
         PlayerPrefs.SetString(GameSettings.LEVEL_DATA_PP, LeveldataJSON.ToJSON(1));
         PlayerPrefs.Save();
         Debug.Log("Initialized Player data: " + PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
