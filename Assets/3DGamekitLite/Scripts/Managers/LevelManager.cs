@@ -8,7 +8,6 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Singleton { get; private set; }
 
-    
     public Button[] levelButtons;
     // Start is called before the first frame update
 
@@ -26,7 +25,6 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-
     void Start()
     {
         
