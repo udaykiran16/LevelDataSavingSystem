@@ -2006,7 +2006,10 @@ GameObject:
   - component: {fileID: 299629790}
   - component: {fileID: 299629789}
   - component: {fileID: 299629788}
+<<<<<<< HEAD
   - component: {fileID: 299629792}
+=======
+>>>>>>> c2614461b89323d3104df6c743a57aa21be7e5de
   - component: {fileID: 299629791}
   m_Layer: 0
   m_Name: 15
@@ -2142,6 +2145,7 @@ MonoBehaviour:
   firstStarImage: {fileID: 340953296}
   secondStarImage: {fileID: 53069457}
   thirdStarImage: {fileID: 1289107197}
+<<<<<<< HEAD
 --- !u!114 &299629792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2159,6 +2163,8 @@ MonoBehaviour:
   firstStarImage: {fileID: 0}
   secondStarImage: {fileID: 0}
   thirdStarImage: {fileID: 0}
+=======
+>>>>>>> c2614461b89323d3104df6c743a57aa21be7e5de
 --- !u!1 &313089815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2579,7 +2585,10 @@ GameObject:
   - component: {fileID: 341839377}
   - component: {fileID: 341839376}
   - component: {fileID: 341839375}
+<<<<<<< HEAD
   - component: {fileID: 341839379}
+=======
+>>>>>>> c2614461b89323d3104df6c743a57aa21be7e5de
   - component: {fileID: 341839378}
   m_Layer: 0
   m_Name: 14
@@ -2715,6 +2724,7 @@ MonoBehaviour:
   firstStarImage: {fileID: 356354737}
   secondStarImage: {fileID: 1135593757}
   thirdStarImage: {fileID: 1994251058}
+<<<<<<< HEAD
 --- !u!114 &341839379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2732,6 +2742,8 @@ MonoBehaviour:
   firstStarImage: {fileID: 0}
   secondStarImage: {fileID: 0}
   thirdStarImage: {fileID: 0}
+=======
+>>>>>>> c2614461b89323d3104df6c743a57aa21be7e5de
 --- !u!1 &345549147
 GameObject:
   m_ObjectHideFlags: 0
