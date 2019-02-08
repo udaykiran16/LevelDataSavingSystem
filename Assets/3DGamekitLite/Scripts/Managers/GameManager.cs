@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         enemyCount = enemies.Length;
         Debug.Log("spawned Enemies:" + enemyCount);
-        initializeData();
+      
     }
 
     // Update is called once per frame
@@ -78,8 +78,6 @@ public class GameManager : MonoBehaviour
 
     public void Rating()
     {
-        JSONNode LevelData = JSON.Parse(PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
-        numStars = LevelData["LevelData"]["levelIndex"]["numStars"].AsInt;
 
         if (minutes <= 5)
            numStars =  3;
@@ -87,22 +85,18 @@ public class GameManager : MonoBehaviour
            numStars = 2;
         else if (minutes > 8)
            numStars = 1;
-        LevelData["LevelData"]["levelIndex"]["numStars"].AsInt = numStars;
+
+        JSONNode LevelData = JSON.Parse(PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
+
+        LevelData["LevelData"]["level_" + levelIndex.ToString()]["numStars"].AsInt = numStars;
+        LevelData["LevelData"]["levelUnlocked"].AsInt = levelIndex++;
+
         PlayerPrefs.SetString(GameSettings.LEVEL_DATA_PP, LevelData.ToJSON(1));
         PlayerPrefs.Save();
         Debug.Log("heloo" + PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
     }
 
-    public void initializeData()
-    {
-        JSONNode LeveldataJSON = JSON.Parse("{}");
-        LeveldataJSON["LevelData"]["levelIndex"].AsInt = levelIndex;
-        LeveldataJSON["LevelData"]["levelIndex"]["numStars"].AsInt = 0;
-        PlayerPrefs.SetString(GameSettings.LEVEL_DATA_PP, LeveldataJSON.ToJSON(1));
-        PlayerPrefs.Save();
-        Debug.Log("Initialized Player data: " + PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
 
-    }
     public void LevelFailed()
     {
         StartUI.Singleton.ShowLevelFailCanvas();

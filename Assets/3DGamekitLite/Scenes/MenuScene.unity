@@ -6296,8 +6296,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd14c73205edf9745a0ccfae82eedc2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelButtons: []
-  levelLocks: []
+  levelButtons:
+  - {fileID: 837544595}
+  - {fileID: 1536666110}
+  - {fileID: 1048081291}
+  - {fileID: 1866970437}
+  - {fileID: 1625318329}
+  - {fileID: 1555535889}
+  - {fileID: 617497315}
+  - {fileID: 1492791497}
+  - {fileID: 814550767}
+  - {fileID: 1913074466}
+  - {fileID: 574846930}
+  - {fileID: 527643337}
+  - {fileID: 226086346}
+  - {fileID: 341839375}
+  - {fileID: 299629788}
+  - {fileID: 1406778066}
+  - {fileID: 370914747}
+  - {fileID: 345549149}
+  levelLocks:
+  - {fileID: 851634263}
+  - {fileID: 1927877203}
+  - {fileID: 822978333}
+  - {fileID: 1799134185}
+  - {fileID: 1050235130}
+  - {fileID: 1530906939}
+  - {fileID: 1375880795}
+  - {fileID: 1924066219}
+  - {fileID: 678873684}
+  - {fileID: 1798496603}
+  - {fileID: 1013652158}
+  - {fileID: 924726387}
+  - {fileID: 238189210}
+  - {fileID: 1122463993}
+  - {fileID: 933556669}
+  - {fileID: 895140649}
+  - {fileID: 1830079403}
+  - {fileID: 396413816}
 --- !u!4 &701015550
 Transform:
   m_ObjectHideFlags: 0
