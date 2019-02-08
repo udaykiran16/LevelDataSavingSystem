@@ -44,9 +44,13 @@ public class GameManager : MonoBehaviour
         enemyCount = enemies.Length;
         Debug.Log("spawned Enemies:" + enemyCount);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         initializeData();
 
+=======
+      
+>>>>>>> 41769053681caa9d4dc23bdefb065b0933f069d5
 =======
       
 >>>>>>> 41769053681caa9d4dc23bdefb065b0933f069d5
@@ -88,9 +92,12 @@ public class GameManager : MonoBehaviour
     public void Rating()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         JSONNode LevelData = JSON.Parse(PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
        
 =======
+=======
+>>>>>>> 41769053681caa9d4dc23bdefb065b0933f069d5
 
 >>>>>>> 41769053681caa9d4dc23bdefb065b0933f069d5
         if (minutes <= 5)
