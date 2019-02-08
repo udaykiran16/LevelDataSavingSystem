@@ -2006,6 +2006,10 @@ GameObject:
   - component: {fileID: 299629790}
   - component: {fileID: 299629789}
   - component: {fileID: 299629788}
+<<<<<<< HEAD
+  - component: {fileID: 299629792}
+=======
+>>>>>>> c2614461b89323d3104df6c743a57aa21be7e5de
   - component: {fileID: 299629791}
   m_Layer: 0
   m_Name: 15
@@ -2141,6 +2145,26 @@ MonoBehaviour:
   firstStarImage: {fileID: 340953296}
   secondStarImage: {fileID: 53069457}
   thirdStarImage: {fileID: 1289107197}
+<<<<<<< HEAD
+--- !u!114 &299629792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299629786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05049a196c8f4544bfd6e04876fc4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeIndex: 15
+  starsHolder: {fileID: 0}
+  firstStarImage: {fileID: 0}
+  secondStarImage: {fileID: 0}
+  thirdStarImage: {fileID: 0}
+=======
+>>>>>>> c2614461b89323d3104df6c743a57aa21be7e5de
 --- !u!1 &313089815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2561,6 +2585,10 @@ GameObject:
   - component: {fileID: 341839377}
   - component: {fileID: 341839376}
   - component: {fileID: 341839375}
+<<<<<<< HEAD
+  - component: {fileID: 341839379}
+=======
+>>>>>>> c2614461b89323d3104df6c743a57aa21be7e5de
   - component: {fileID: 341839378}
   m_Layer: 0
   m_Name: 14
@@ -2696,6 +2724,26 @@ MonoBehaviour:
   firstStarImage: {fileID: 356354737}
   secondStarImage: {fileID: 1135593757}
   thirdStarImage: {fileID: 1994251058}
+<<<<<<< HEAD
+--- !u!114 &341839379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341839373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05049a196c8f4544bfd6e04876fc4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeIndex: 0
+  starsHolder: {fileID: 0}
+  firstStarImage: {fileID: 0}
+  secondStarImage: {fileID: 0}
+  thirdStarImage: {fileID: 0}
+=======
+>>>>>>> c2614461b89323d3104df6c743a57aa21be7e5de
 --- !u!1 &345549147
 GameObject:
   m_ObjectHideFlags: 0
@@ -10046,15 +10094,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 701015549}
-        m_MethodName: LoadTheScene
-        m_Mode: 5
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level_03
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
