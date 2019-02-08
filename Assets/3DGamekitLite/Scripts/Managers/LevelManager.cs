@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using SimpleJSON;
 
 public class LevelManager : MonoBehaviour
 {
@@ -28,15 +29,38 @@ public class LevelManager : MonoBehaviour
     }
     void Start()
     {
-        // here we should get the integer value of levelUnlocked from JSON
+        if(PlayerPrefs.HasKey(GameSettings.LEVEL_DATA_PP) == false)
+        {
+            initializeData();
+        }
+
+        Unlocklevel();
+       
+    }
+
+    public void initializeData()
+    {
+        JSONNode LeveldataJSON = JSON.Parse("{}");
+
+        LeveldataJSON["LevelData"]["levelUnlocked"].AsInt = 1;
+        LeveldataJSON["LevelData"]["level_1"]["numStars"].AsInt = 0;
+
+        PlayerPrefs.SetString(GameSettings.LEVEL_DATA_PP, LeveldataJSON.ToJSON(1));
+        PlayerPrefs.Save();
+        Debug.Log("Initialized Player data: " + PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
+
     }
 
     //Unlock levels
     void Unlocklevel()
-    {
+    { // here we should get the integer value of levelUnlocked from JSON
+        JSONNode LevelData = JSON.Parse(PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
+
+        levelUnlocked = LevelData["LevelData"]["levelUnlocked"].AsInt;
+
         for (int i = 0; i < levelLocks.Length; i++)
         {
-            if (i <= levelUnlocked)
+            if (i < levelUnlocked)
             {
                 levelButtons[i].interactable = true;
                 levelLocks[i].gameObject.SetActive(false);

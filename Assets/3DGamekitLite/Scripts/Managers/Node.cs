@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SimpleJSON;
 
 public class Node : MonoBehaviour
 {
@@ -28,8 +29,12 @@ public class Node : MonoBehaviour
     {
         //Based on number of stars activate the images
         starsHolder.gameObject.SetActive(true);
-   
+
         // Here we should get the number of stars from JSON 
+        JSONNode LevelData = JSON.Parse(PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
+
+        numberOfStars = LevelData["LevelData"]["level_" + nodeIndex.ToString()]["numStars"].AsInt;
+
         if (starsImagesList.Count > 0)
         {
             //Lets set all the stars off

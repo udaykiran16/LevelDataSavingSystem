@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     public int levelIndex;
+
     public Text timerText;
     private float startTime;
     private bool finish = false;
@@ -36,11 +37,19 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+         
+        
         startTime = Time.time;
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         enemyCount = enemies.Length;
         Debug.Log("spawned Enemies:" + enemyCount);
+<<<<<<< HEAD
+
         initializeData();
+
+=======
+      
+>>>>>>> 41769053681caa9d4dc23bdefb065b0933f069d5
     }
 
     // Update is called once per frame
@@ -78,31 +87,30 @@ public class GameManager : MonoBehaviour
 
     public void Rating()
     {
+<<<<<<< HEAD
         JSONNode LevelData = JSON.Parse(PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
-        numStars = LevelData["LevelData"]["levelIndex"]["numStars"].AsInt;
+       
+=======
 
+>>>>>>> 41769053681caa9d4dc23bdefb065b0933f069d5
         if (minutes <= 5)
            numStars =  3;
         else if ( minutes>5 && minutes <= 8 )
            numStars = 2;
         else if (minutes > 8)
            numStars = 1;
-        LevelData["LevelData"]["levelIndex"]["numStars"].AsInt = numStars;
+
+        JSONNode LevelData = JSON.Parse(PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
+
+        LevelData["LevelData"]["level_" + levelIndex.ToString()]["numStars"].AsInt = numStars;
+        LevelData["LevelData"]["levelUnlocked"].AsInt = levelIndex++;
+
         PlayerPrefs.SetString(GameSettings.LEVEL_DATA_PP, LevelData.ToJSON(1));
         PlayerPrefs.Save();
         Debug.Log("heloo" + PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
     }
 
-    public void initializeData()
-    {
-        JSONNode LeveldataJSON = JSON.Parse("{}");
-        LeveldataJSON["LevelData"]["levelIndex"].AsInt = levelIndex;
-        LeveldataJSON["LevelData"]["levelIndex"]["numStars"].AsInt = 0;
-        PlayerPrefs.SetString(GameSettings.LEVEL_DATA_PP, LeveldataJSON.ToJSON(1));
-        PlayerPrefs.Save();
-        Debug.Log("Initialized Player data: " + PlayerPrefs.GetString(GameSettings.LEVEL_DATA_PP));
 
-    }
     public void LevelFailed()
     {
         StartUI.Singleton.ShowLevelFailCanvas();
